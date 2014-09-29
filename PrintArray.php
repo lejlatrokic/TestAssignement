@@ -10,6 +10,7 @@ class PrintArray {
 		} else {
 			$j = 0;
 			foreach ($data as $row) {
+				$row_array = array();
 				if (!is_array($row)) {
 					return 'Error: Wrong array type provided';
 				} else {
@@ -21,6 +22,7 @@ class PrintArray {
 				$j++;
 				if ($j==1) break;
 			}
+			
 			$j = 1;
 			foreach ($data as $row) {
 				if ($j <> 1) {
@@ -32,6 +34,7 @@ class PrintArray {
 							if (!in_array($key, $columns)) {
 								return 'Error: Arrays contains different column names';
 							}
+							
 							$row_columns++;
 						}
 						if ($row_columns <> $number_of_columns) {
@@ -48,8 +51,8 @@ class PrintArray {
 		
 		$i = 0;
 		foreach ($columns as $row) {
-			if (isset($colors[$i])) {
-				$color = $colors[$i];
+			if (isset($colors[$i%4])) {
+				$color = $colors[$i%4];
 			} else {
 				$color = '#FFFFFF';
 			}
@@ -61,13 +64,13 @@ class PrintArray {
 		foreach ($data as $row) {
 			$html .= '<tr>';
 			$i = 0;
-			foreach ($row as $val) {		
-				if (isset($colors[$i])) {
-					$color = $colors[$i];
+			foreach ($columns as $column) {
+				if (isset($colors[$i%4])) {
+					$color = $colors[$i%4];
 				} else {
 					$color = '#FFFFFF';
 				}
-				$html .= '<td style="background:'.$color.'">'.$val.'</td>';
+				$html .= '<td style="background:'.$color.'">'.$row[$column].'</td>';
 				$i++;
 			}
 			$html .= '</tr>';		

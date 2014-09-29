@@ -6,19 +6,19 @@
 			'Name' => 'Trixie',
 			'Color' => 'Green',
 			'Element' => 'Earth',
-			'Likes' => 'Flowers'
+			'Likes' => 'Flowers',
 			),
 		array(
 			'Name' => 'Tinkerbell',
 			'Element' => 'Air',
 			'Likes' => 'Singning',
-			'Color' => 'Blue'
+			'Color' => 'Blue',
 			), 
 		array(
 			'Element' => 'Water',
 			'Likes' => 'Dancing',
 			'Name' => 'Blum',
-			'Color' => 'Pink'
+			'Color' => 'Pink',
 			),
 	);
 
