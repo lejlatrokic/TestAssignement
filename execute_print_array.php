@@ -1,6 +1,6 @@
 <?php 
 	require_once('PrintArray.php');
-	
+
 	$data = array(
 		array(
 			'Name' => 'Trixie',
@@ -9,7 +9,7 @@
 			'Likes' => 'Flowers'
 			),
 		array(
-			'DifferentName' => 'Tinkerbell',
+			'Name' => 'Tinkerbell',
 			'Element' => 'Air',
 			'Likes' => 'Singning',
 			'Color' => 'Blue'

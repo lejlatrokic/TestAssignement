@@ -44,7 +44,7 @@ class PrintArray {
 		}
 		$colors = array ('#FF0000', '#00FF00', '#FCFC2D', '#0000FF');
 		
-		$html = '<table border="1" cellpadding="5"><tr>';
+		$html = '<table border="1" cellpadding="5" cellspacing="0"><tr>';
 		
 		$i = 0;
 		foreach ($columns as $row) {
